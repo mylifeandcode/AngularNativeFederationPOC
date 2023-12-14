@@ -1,0 +1,5 @@
+{
+	"registration": "http://localhost:4201/remoteEntry.json",
+	"activities": "http://localhost:4202/remoteEntry.json",
+	"profile": "http://localhost:4203/remoteEntry.json"
+}
