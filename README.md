@@ -1,5 +1,7 @@
 # AngularNativeFederationPOC
 
+The steps for adding Native Federation can be found [here](https://www.npmjs.com/package/@angular-architects/native-federation).
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
 
 ## Development server
