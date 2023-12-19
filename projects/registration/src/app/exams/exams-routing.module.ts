@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: 'exam-registration',
     component: ExamRegistrationComponent
+  },
+  {
+    path: '**',
+    component: ExamRegistrationComponent
   }
 ];
 

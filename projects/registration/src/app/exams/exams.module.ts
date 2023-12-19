@@ -7,7 +7,6 @@ import { ExamRegistrationComponent } from './exam-registration/exam-registration
 
 @NgModule({
   declarations: [
-  
     ExamRegistrationComponent
   ],
   imports: [

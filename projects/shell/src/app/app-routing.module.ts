@@ -12,7 +12,7 @@ const routes: Routes = [
     pathMatch: 'full'
   }, 
   {
-    path: 'registration',
+    path: 'registration', //Using loadChildren per error message given when using loadComponent
     loadChildren: () => loadRemoteModule('registration', './Module').then((m) => m.ExamsModule)
   },
   {
