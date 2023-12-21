@@ -128,7 +128,7 @@
 				}
 			}
 		},
-		"registration": {
+		"registration-mfe": {
 			"projectType": "application",
 			"schematics": {
 				"@schematics/angular:component": {
@@ -142,8 +142,8 @@
 					"standalone": false
 				}
 			},
-			"root": "projects/registration",
-			"sourceRoot": "projects/registration/src",
+			"root": "projects/registration-mfe",
+			"sourceRoot": "projects/registration-mfe/src",
 			"prefix": "app",
 			"architect": {
 				"build": {
@@ -151,10 +151,10 @@
 					"options": {},
 					"configurations": {
 						"production": {
-							"target": "registration:esbuild:production"
+							"target": "registration-mfe:esbuild:production"
 						},
 						"development": {
-							"target": "registration:esbuild:development",
+							"target": "registration-mfe:esbuild:development",
 							"dev": true
 						}
 					},
@@ -163,7 +163,7 @@
 				"serve": {
 					"builder": "@angular-architects/native-federation:build",
 					"options": {
-						"target": "registration:esbuild:development",
+						"target": "registration-mfe:esbuild:development",
 						"rebuildDelay": 0,
 						"dev": true,
 						"port": 4201
@@ -172,7 +172,7 @@
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
 					"options": {
-						"buildTarget": "registration:build"
+						"buildTarget": "registration-mfe:build"
 					}
 				},
 				"test": {
@@ -182,14 +182,14 @@
 							"zone.js",
 							"zone.js/testing"
 						],
-						"tsConfig": "projects/registration/tsconfig.spec.json",
+						"tsConfig": "projects/registration-mfe/tsconfig.spec.json",
 						"inlineStyleLanguage": "scss",
 						"assets": [
-							"projects/registration/src/favicon.ico",
-							"projects/registration/src/assets"
+							"projects/registration-mfe/src/favicon.ico",
+							"projects/registration-mfe/src/assets"
 						],
 						"styles": [
-							"projects/registration/src/styles.scss"
+							"projects/registration-mfe/src/styles.scss"
 						],
 						"scripts": []
 					}
@@ -197,23 +197,23 @@
 				"esbuild": {
 					"builder": "@angular-devkit/build-angular:browser-esbuild",
 					"options": {
-						"outputPath": "dist/registration",
-						"index": "projects/registration/src/index.html",
+						"outputPath": "dist/registration-mfe",
+						"index": "projects/registration-mfe/src/index.html",
 						"polyfills": [
 							"zone.js",
 							"es-module-shims"
 						],
-						"tsConfig": "projects/registration/tsconfig.app.json",
+						"tsConfig": "projects/registration-mfe/tsconfig.app.json",
 						"inlineStyleLanguage": "scss",
 						"assets": [
-							"projects/registration/src/favicon.ico",
-							"projects/registration/src/assets"
+							"projects/registration-mfe/src/favicon.ico",
+							"projects/registration-mfe/src/assets"
 						],
 						"styles": [
-							"projects/registration/src/styles.scss"
+							"projects/registration-mfe/src/styles.scss"
 						],
 						"scripts": [],
-						"main": "projects/registration/src/main.ts"
+						"main": "projects/registration-mfe/src/main.ts"
 					},
 					"configurations": {
 						"production": {
@@ -243,17 +243,17 @@
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
 						"production": {
-							"buildTarget": "registration:build:production"
+							"buildTarget": "registration-mfe:build:production"
 						},
 						"development": {
-							"buildTarget": "registration:build:development"
+							"buildTarget": "registration-mfe:build:development"
 						}
 					},
 					"defaultConfiguration": "development"
 				}
 			}
 		},
-		"activities": {
+		"activities-mfe": {
 			"projectType": "application",
 			"schematics": {
 				"@schematics/angular:component": {
@@ -267,8 +267,8 @@
 					"standalone": false
 				}
 			},
-			"root": "projects/activities",
-			"sourceRoot": "projects/activities/src",
+			"root": "projects/activities-mfe",
+			"sourceRoot": "projects/activities-mfe/src",
 			"prefix": "app",
 			"architect": {
 				"build": {
@@ -276,10 +276,10 @@
 					"options": {},
 					"configurations": {
 						"production": {
-							"target": "activities:esbuild:production"
+							"target": "activities-mfe:esbuild:production"
 						},
 						"development": {
-							"target": "activities:esbuild:development",
+							"target": "activities-mfe:esbuild:development",
 							"dev": true
 						}
 					},
@@ -288,7 +288,7 @@
 				"serve": {
 					"builder": "@angular-architects/native-federation:build",
 					"options": {
-						"target": "activities:esbuild:development",
+						"target": "activities-mfe:esbuild:development",
 						"rebuildDelay": 0,
 						"dev": true,
 						"port": 4202
@@ -297,7 +297,7 @@
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
 					"options": {
-						"buildTarget": "activities:build"
+						"buildTarget": "activities-mfe:build"
 					}
 				},
 				"test": {
@@ -307,14 +307,14 @@
 							"zone.js",
 							"zone.js/testing"
 						],
-						"tsConfig": "projects/activities/tsconfig.spec.json",
+						"tsConfig": "projects/activities-mfe/tsconfig.spec.json",
 						"inlineStyleLanguage": "scss",
 						"assets": [
-							"projects/activities/src/favicon.ico",
-							"projects/activities/src/assets"
+							"projects/activities-mfe/src/favicon.ico",
+							"projects/activities-mfe/src/assets"
 						],
 						"styles": [
-							"projects/activities/src/styles.scss"
+							"projects/activities-mfe/src/styles.scss"
 						],
 						"scripts": []
 					}
@@ -322,23 +322,23 @@
 				"esbuild": {
 					"builder": "@angular-devkit/build-angular:browser-esbuild",
 					"options": {
-						"outputPath": "dist/activities",
-						"index": "projects/activities/src/index.html",
+						"outputPath": "dist/activities-mfe",
+						"index": "projects/activities-mfe/src/index.html",
 						"polyfills": [
 							"zone.js",
 							"es-module-shims"
 						],
-						"tsConfig": "projects/activities/tsconfig.app.json",
+						"tsConfig": "projects/activities-mfe/tsconfig.app.json",
 						"inlineStyleLanguage": "scss",
 						"assets": [
-							"projects/activities/src/favicon.ico",
-							"projects/activities/src/assets"
+							"projects/activities-mfe/src/favicon.ico",
+							"projects/activities-mfe/src/assets"
 						],
 						"styles": [
-							"projects/activities/src/styles.scss"
+							"projects/activities-mfe/src/styles.scss"
 						],
 						"scripts": [],
-						"main": "projects/activities/src/main.ts"
+						"main": "projects/activities-mfe/src/main.ts"
 					},
 					"configurations": {
 						"production": {
@@ -368,17 +368,17 @@
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
 						"production": {
-							"buildTarget": "activities:build:production"
+							"buildTarget": "activities-mfe:build:production"
 						},
 						"development": {
-							"buildTarget": "activities:build:development"
+							"buildTarget": "activities-mfe:build:development"
 						}
 					},
 					"defaultConfiguration": "development"
 				}
 			}
 		},
-		"profile": {
+		"profile-mfe": {
 			"projectType": "application",
 			"schematics": {
 				"@schematics/angular:component": {
@@ -392,8 +392,8 @@
 					"standalone": false
 				}
 			},
-			"root": "projects/profile",
-			"sourceRoot": "projects/profile/src",
+			"root": "projects/profile-mfe",
+			"sourceRoot": "projects/profile-mfe/src",
 			"prefix": "app",
 			"architect": {
 				"build": {
@@ -401,10 +401,10 @@
 					"options": {},
 					"configurations": {
 						"production": {
-							"target": "profile:esbuild:production"
+							"target": "profile-mfe:esbuild:production"
 						},
 						"development": {
-							"target": "profile:esbuild:development",
+							"target": "profile-mfe:esbuild:development",
 							"dev": true
 						}
 					},
@@ -413,7 +413,7 @@
 				"serve": {
 					"builder": "@angular-architects/native-federation:build",
 					"options": {
-						"target": "profile:esbuild:development",
+						"target": "profile-mfe:esbuild:development",
 						"rebuildDelay": 0,
 						"dev": true,
 						"port": 4203
@@ -422,7 +422,7 @@
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
 					"options": {
-						"buildTarget": "profile:build"
+						"buildTarget": "profile-mfe:build"
 					}
 				},
 				"test": {
@@ -432,14 +432,14 @@
 							"zone.js",
 							"zone.js/testing"
 						],
-						"tsConfig": "projects/profile/tsconfig.spec.json",
+						"tsConfig": "projects/profile-mfe/tsconfig.spec.json",
 						"inlineStyleLanguage": "scss",
 						"assets": [
-							"projects/profile/src/favicon.ico",
-							"projects/profile/src/assets"
+							"projects/profile-mfe/src/favicon.ico",
+							"projects/profile-mfe/src/assets"
 						],
 						"styles": [
-							"projects/profile/src/styles.scss"
+							"projects/profile-mfe/src/styles.scss"
 						],
 						"scripts": []
 					}
@@ -447,23 +447,23 @@
 				"esbuild": {
 					"builder": "@angular-devkit/build-angular:browser-esbuild",
 					"options": {
-						"outputPath": "dist/profile",
-						"index": "projects/profile/src/index.html",
+						"outputPath": "dist/profile-mfe",
+						"index": "projects/profile-mfe/src/index.html",
 						"polyfills": [
 							"zone.js",
 							"es-module-shims"
 						],
-						"tsConfig": "projects/profile/tsconfig.app.json",
+						"tsConfig": "projects/profile-mfe/tsconfig.app.json",
 						"inlineStyleLanguage": "scss",
 						"assets": [
-							"projects/profile/src/favicon.ico",
-							"projects/profile/src/assets"
+							"projects/profile-mfe/src/favicon.ico",
+							"projects/profile-mfe/src/assets"
 						],
 						"styles": [
-							"projects/profile/src/styles.scss"
+							"projects/profile-mfe/src/styles.scss"
 						],
 						"scripts": [],
-						"main": "projects/profile/src/main.ts"
+						"main": "projects/profile-mfe/src/main.ts"
 					},
 					"configurations": {
 						"production": {
@@ -493,10 +493,10 @@
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
 						"production": {
-							"buildTarget": "profile:build:production"
+							"buildTarget": "profile-mfe:build:production"
 						},
 						"development": {
-							"buildTarget": "profile:build:development"
+							"buildTarget": "profile-mfe:build:development"
 						}
 					},
 					"defaultConfiguration": "development"

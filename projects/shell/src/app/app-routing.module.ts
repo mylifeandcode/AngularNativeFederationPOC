@@ -10,10 +10,18 @@ const routes: Routes = [
     path: '',
     component: HomeComponent,
     pathMatch: 'full'
+  },
+  {
+    path: 'activities',
+    loadChildren: () => loadRemoteModule('activities', './Module').then((m) => m.ActivitiesModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => loadRemoteModule('profile', './Module').then((m) => m.ProfileModule)
   }, 
   {
     path: 'registration', //Using loadChildren per error message given when using loadComponent
-    loadChildren: () => loadRemoteModule('registration', './Module').then((m) => m.ExamsModule)
+    loadChildren: () => loadRemoteModule('registration', './Module').then((m) => m.RegistrationModule)
   },
   {
     path: '**',
